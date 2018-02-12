@@ -7,6 +7,7 @@ ARG VERSION=3.2.3
 LABEL version=$VERSION
 
 RUN npm install --global gitbook-cli &&\
+        npm i -g gitbook-plugin-hide-element gitbook-plugin-mermaid-gb3 &&\
 	gitbook fetch ${VERSION} &&\
 	npm cache clear &&\
 	rm -rf /tmp/*
