@@ -12,8 +12,8 @@ RUN npm install --global gitbook-cli &&\
 	npm cache clear &&\
 	rm -rf /tmp/*
 
+ADD . /gitbook
 WORKDIR /gitbook
-
 VOLUME /gitbook 
 
 EXPOSE 4000 35729
